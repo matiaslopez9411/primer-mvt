@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from primermvt.views import saludo
+from primermvt.views import saludo, lista_familiares
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('saludo/', saludo),
-]
+    path('lista-familiares/', lista_familiares),
+    ]
