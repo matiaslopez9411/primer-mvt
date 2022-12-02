@@ -6,7 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <h1>Lista de mis familiares</h1>
+<style>
+table, th, td {
+  border: 5px solid;
+  border-color: #f7eab2;
+  border-collapse: collapse;
+}    
+</style>
+<body style="background-color:#ffffff">
+
+    <h1 style="text-align:center;">Lista de mis familiares</h1>
+    <table style="background-color:#C4E8F9; width:50%">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Edad</th>
+            <th>DNI</th>
+            <th>Fecha de ingreso</th>
+        </tr>
+        {% for familiar in familiares %}
+        <tr>
+            <td>{{familiar.nombre}}</td>
+            <td>{{familiar.apellido}}</td>
+            <td>{{familiar.edad}}</td>
+            <td>{{familiar.dni}}</td>
+            <td>{{familiar.fecha_ingreso}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
 </body>
 </html>

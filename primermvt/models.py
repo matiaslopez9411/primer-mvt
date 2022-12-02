@@ -6,4 +6,4 @@ class Familiar(models.Model):
     apellido= models.CharField(max_length=100)
     edad= models.IntegerField()
     dni= models.IntegerField()
-    fecha_ingreso= models.DateFieldgi
+    fecha_ingreso= models.DateField()
